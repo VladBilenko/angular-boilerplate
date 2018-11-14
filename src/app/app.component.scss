@@ -1,8 +1,7 @@
-@import "../assets/styles/vars";
-@import "../assets/styles/mixines";
+@import '../assets/styles/vars';
+@import '../assets/styles/mixines';
 
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -12,28 +11,38 @@
 
 html {
   font-family: sans-serif;
-  font-weight: 400;
   font-size: 15px;
+  font-weight: 400;
   min-height: 100%;
 }
 
 body {
   height: 100%;
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
   max-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
-body.no-scroll {
-  overflow: hidden;
-}
-
-body, ul, ol, h1, h2, h3, h4, h5, h6, p, button {
-  padding: 0;
-  margin: 0;
+body,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
   font-size: inherit;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -44,26 +53,23 @@ a {
   display: block;
 }
 
-span, a {
-  /*display: inline-block; */
-}
-
 button {
-  border: none;
-  cursor: pointer;
   background: transparent;
-  font-family: "Core Sans G", sans-serif;
+  border: 0;
   color: inherit;
+  cursor: pointer;
+  font-family: 'Core Sans G', sans-serif;
+
+  &:focus {
+    outline: none;
+  }
 }
 
-button:focus {
-  outline: none;
-}
-
-input, select {
-  border: none;
-  font-weight: inherit;
-  font-size: inherit;
-  padding: 0;
+input,
+select {
   background-color: transparent;
+  border: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
 }
