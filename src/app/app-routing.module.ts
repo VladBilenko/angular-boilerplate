@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: '/template', pathMatch: 'full' },
-  { path: 'template', loadChildren: 'app/template-module/template.module#TemplateModule' },
+  { path: 'template', loadChildren: () => import('app/template-module/template.module').then((m) => m.TemplateModule) },
   { path: '**', redirectTo: '/template' },
 ];
 
